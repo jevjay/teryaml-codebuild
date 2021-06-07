@@ -5,11 +5,6 @@ variable "repository_name" {
   description = "Repository name to which Codebuild Job should be linked"
 }
 
-variable "repository_arn" {
-  type        = string
-  description = "Repository AWS Identifier, to which Codebuild Job should be linked"
-}
-
 variable "repository_url" {
   type        = string
   description = "Repository clone URL"

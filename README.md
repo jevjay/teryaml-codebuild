@@ -1,6 +1,8 @@
 # terraforest-codebuild
 
-![Terraforest](./img/logo.png)
+<p align="center">
+  <img width="198" height="141" src="./img/logo.png">
+</p>
 
 Terraform module used to configure AWS Codebuild job and its supporting resources.
 

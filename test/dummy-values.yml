@@ -1,0 +1,30 @@
+config:
+  - name: test-job
+    timeout: 5
+    badge_enabled: false
+    service_role:
+      name: test-job-role
+      policy: |
+        {
+          "Version": "2012-10-17",
+          "Statement": {
+            "Effect": "Allow",
+            "Action": [
+              "iam:Get*",
+              "iam:List*",
+              "iam:Generate*"
+            ],
+            "Resource": "*"
+          }
+        }
+    source:
+      type: NO_SOURCE
+    artifacts:
+      type: NO_ARTIFACTS
+    cache:
+      type: NO_CACHE
+    environment:
+      compute_type: BUILD_GENERAL1_MEDIUM
+      
+
+  

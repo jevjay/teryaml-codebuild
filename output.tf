@@ -1,7 +1,11 @@
-output "codebuild_job_arn" {
-  value = aws_codebuild_project.job.*.arn
+output "codebuild_project_arn" {
+  value = [
+    for project in aws_codebuild_project.job : project.arn
+  ]
 }
 
-output "codebuild_job_name" {
-  value = aws_codebuild_project.job.*.id
+output "codebuild_project_name" {
+  value = [
+    for project in aws_codebuild_project.job : project.id
+  ]
 }

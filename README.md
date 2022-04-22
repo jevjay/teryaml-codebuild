@@ -1,12 +1,10 @@
-# terraforest-codebuild
+![Terrabits logo](./img/terrabits-logo.png)
 
-<p align="center">
-  <img width="198" height="141" src="./img/logo.png">
-</p>
+# terraforest-codebuild
 
 Terraform module used to configure AWS Codebuild job and its supporting resources.
 
-# Usage
+## Usage
 
 Create a simple Codebuild job integrated with AWS CodeCommit as a source
 

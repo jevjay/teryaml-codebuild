@@ -18,13 +18,22 @@ config:
           }
         }
     source:
-      type: NO_SOURCE
+      type: GITHUB
+      credentials:
+        server_type: GITHUB
+        auth_type: PERSONAL_ACCESS_TOKEN
+        token: example
+      fetch_git_submodules: false
     artifacts:
       type: NO_ARTIFACTS
     cache:
       type: NO_CACHE
     environment:
       compute_type: BUILD_GENERAL1_MEDIUM
+      variables:
+        - name: APP_NAME
+          value: test-job
+          type: PLAINTEXT
       
 
   

@@ -115,14 +115,12 @@ locals {
   ]))
 
   environment_variables = try(flatten([
-    for i, config in local.config : [
-      for j, environment_config in config.environment : [
-        for k, environment_variable in environment_config.variables : {
-          name  = environment_variable.name
-          value = environment_variable.value
-          type  = lookup(environment_variable, "type", "PLAINTEXT")
-        }
-      ]
+    for config in local.config : [
+      for v in lookup(config.environment, "variables", []) : {
+        name  = v.name
+        value = v.value
+        type  = v.type
+      }
     ]
   ]), {})
 

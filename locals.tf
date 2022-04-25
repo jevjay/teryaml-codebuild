@@ -1,7 +1,7 @@
 locals {
   # === CONFIG file parsing ===
 
-  file_config = try(yamldecode(file(var.config))["config"], {})
+  file_config = try(yamldecode(file(var.config))["config"], [])
   raw_config  = yamldecode(var.raw_config)["config"]
   # Overwrite configurations (if applicable)
   config = length(local.raw_config) > 0 ? local.raw_config : local.file_config

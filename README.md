@@ -1,6 +1,6 @@
-![Terrabits logo](./img/terrabits-logo.png)
+![tbits logo](./img/tbits-logo.png)
 
-# terraforest-codebuild
+# tbits-codebuild
 
 Terraform module used to configure AWS Codebuild job and its supporting resources.
 
@@ -10,7 +10,7 @@ Create a simple Codebuild job integrated with AWS CodeCommit as a source
 
 ```hcl
 module "codecommit_projects" {
-  source  = "github.com/jevjay/terraforest-codebuild"
+  source  = "github.com/jevjay/tbits-codebuild"
 
   config = "path/to/configuration"
   shared_tags = {

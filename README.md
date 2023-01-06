@@ -1,6 +1,6 @@
-![tbits logo](./img/tbits-logo.png)
+![teryaml logo](./img/tbits-logo.png)
 
-# tbits-codebuild
+# teryaml-codebuild
 
 Terraform module used to configure AWS Codebuild job and its supporting resources.
 
